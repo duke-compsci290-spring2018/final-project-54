@@ -344,6 +344,16 @@
 
         //Acceptable bias score will be between 2.5-3.5
         //averageBias - 2.5 >=0 || 3.5 - averageBias >= 1
+
+        var quoteCount = 0
+        for (let i in userData){
+          if (userData[i] == ""){
+            quoteCount++
+          }
+        }
+        if (quoteCount == userData.length) {
+          return "N/A";
+        }
         return averageBias
       }
       else {
