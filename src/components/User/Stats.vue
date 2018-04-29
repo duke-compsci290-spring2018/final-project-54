@@ -16,16 +16,17 @@
       <h3>🗳️ Average Vote </h3>
       You have voted on {{voteLength}} sources with an average rating of {{voteAverage}}
       <br><button class="btn btn-lg btn-primary" v-on:click="seen = !seen">Methodology</button><br>
-      <p v-if="seen"> Ex. 5 votes: Liberal (assign 1 point to average), Moderate Liberal (2 pts), Centrist (3 pts), Moderate Conservative (4 pts), Conservative (5 pts) = (1+2+3+4+5)/5 = 3 (Centrist)</p>
-      <p v-if="seen"> *Score on 1-5 scale, 1 being Liberal, 5 being Conservative.</p>
+      <p v-if="seen">Compilation of all the user's voting preferences. Given an even spread of newspapers from across the spectrum (ex. 1 newspaper from each bias category), a user with little bias will have a score near 3.</p>
+      <p v-if="seen">Ex. 5 votes: Liberal (assign 1 point to average), Moderate Liberal (2 pts), Centrist (3 pts), Moderate Conservative (4 pts), Conservative (5 pts) = (1+2+3+4+5)/5 = 3 (Centrist)</p>
+      <p v-if="seen">*Score on 1-5 scale, 1 being Liberal, 5 being Conservative.</p>
     </div>
     <div class="userSentiment">
       <hr><br>
       <h3>😎 User Sentiment </h3>
       <button class="btn btn-lg btn-primary" v-on:click="seen2 = !seen2">Methodology</button><br>
-      <p v-if="seen2">Newspapers were categorized into groups based on bias. Then, the voting habits of the user was compared with each group.</p>
+      <p v-if="seen2">Newspapers were categorized into groups based on bias. Then, the voting habits of the user are compared group.</p>
       <p v-if="seen2">Ex. If there are 3 Liberal papers, and a user votes Liberal, Centrist, and Conservative respectively, the user's overall score will be (1+3+5)/3 = 3. Therefore, they think most Liberal-leaning papers are Centrist (indication of a personal bias). </p>
-      <p v-if="seen2"> *Score on 1-5 scale, 1 being Liberal, 5 being Conservative. </p>
+      <p v-if="seen2">*Score on 1-5 scale, 1 being Liberal, 5 being Conservative. </p>
 
       <div v-for="(i, index) in sentiment">
 

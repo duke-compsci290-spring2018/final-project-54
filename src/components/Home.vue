@@ -2,9 +2,8 @@
   <v-container>
     <h1 v-show="user == null"> 🗳️ Create an account or sign in to start voting! </h1>
     <h1 v-show="user != null">👻 Average User Bias Score: {{sentiment}} <button class="btn btn-lg btn-primary" v-on:click="seen = !seen" v-show="user != null">Methodology</button></h1>
-    <p v-if="seen">Based on your votes, you are only allowed to create sources if you vote within an acceptable range of accuracy (2.5-3.5)</p>
-    <p v-if="seen">Ex. If you vote Conservative on all Liberal-leaning newspapers, you are not trusted to create new items.</p>
-    <p v-if="seen">If you tend to vote within 1 political-affiliation of the standarly accepted bias, your score will be within a 2.5-3.5 range.</p>
+    <p v-if="seen">Users with a bias of between -0.5 and 0.5 are allowed to add new newspapers.</p>
+    <p v-if="seen">If you tend to vote close to standarly accepted bias, your bias score will fall between (-0.5 and 0.5). Voting outside the accepted bias is encouraged, but voting Liberal on a strongly Conservative publication is suspect. This is to prevent users who vote maliciously from creating content.</p>
 
 
     <div>
@@ -152,7 +151,7 @@
         //Run through newspaper bias. ex. on liberal newspapers, you tend to vote moderately liberal
         if (this.$store.getters.user != null) {
           if (this.$store.getters.user.id == 'iMZJzquNYZWVwKewKRknakIQU8J2'){
-            return 3;
+            return 0;
           }
         var userData = this.$store.getters.user.lastVote
         var paperData = this.$store.getters.loadedNewspapers
