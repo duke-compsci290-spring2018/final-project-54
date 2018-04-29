@@ -4,15 +4,19 @@
   "description": "A Vue.js project",
   "author": "Dylan V <dylanvanelli@gmail.com>",
   "private": true,
+  "website": "https://duke-compsci290-spring2018.github.io/final-project-54/",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "lint": "eslint --ext .js,.vue src",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "chart.js": "^2.7.2",
     "firebase": "^4.13.1",
+    "gh-pages": "^1.1.0",
     "hchs-vue-charts": "^1.2.8",
     "vue": "^2.5.2",
     "vue-append": "^1.1.2",
