@@ -2,8 +2,7 @@
 
 > A Vue.js project
 > This project was created by Dylan Vanelli and Sean Snider for CS290.
-> As of now (Saturday March 28), we have not figured out how to deploy the application due to complications with Vue and Node.hs.
-> However, the instructions below provide a sure-fire way to run the application locally on your machine. Since the data within the application uses Firebase, all interactions made by the user are recorded and update the application in real time for all users.
+> The instructions below provide a sure-fire way to run the application locally on your machine. The data within the application saves to Firebase, so all interactions made by the user are recorded and update the application in real time for all users.
 > This application is important and relevant in light of so-called "fake news." The integrity of publications now more than ever must be critically evaluated by the public in order to ensure information is accurate. In that light, we are entrusting the public with determining the media biases of various newspapers.
 > In order to ensure this data is accurate, we have provided tools in our application for users to express their approval of current scores. If approval ratings are noticeably low for a given source, then administrators can take note of the source and determine whether or not to manually remove it.
 > For reference, in order to access the administrative account to test features, the administrative account we have set up for testing purposes is as followed: username: admin@skew.com, password: admin123.
